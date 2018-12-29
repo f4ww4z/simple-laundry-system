@@ -15,6 +15,11 @@
                         @endif
 
                         You are logged in!
+
+                        <p class="card-text">Name: {{ Auth::user()->name }}</p>
+                        <p class="card-text">Birthdate: {{ Auth::user()->birth }}</p>
+                        <p class="card-text">Email: {{ Auth::user()->email }}</p>
+                        <p class="card-text">Phone: {{ Auth::user()->phone }}</p>
                     </div>
                 </div>
             </div>

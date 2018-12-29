@@ -27,6 +27,7 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
 
+                            {{-- Name --}}
                             <div class="form-group row">
                                 <label for="name"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -44,6 +45,47 @@
                                 </div>
                             </div>
 
+                            {{-- Birth --}}
+                            <div class="form-group row">
+                                <label for="birth"
+                                       class="col-md-4 col-form-label text-md-right">
+                                    {{ __('Birthdate (dd/mm/yyyy)') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="birth" type="text"
+                                           class="form-control{{ $errors->has('birth') ? ' is-invalid' : '' }}"
+                                           name="birth" value="{{ old('birth') }}" required
+                                           autofocus>
+
+                                    @if ($errors->has('birth'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('birth') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            {{-- Phone Number --}}
+                            <div class="form-group row">
+                                <label for="phone"
+                                       class="col-md-4 col-form-label text-md-right">
+                                    {{ __('Phone Number') }}</label>
+
+                                <div class="col-md-6">
+                                    <input id="phone" type="text"
+                                           class="form-control{{ $errors->has('phone') ? ' is-invalid' : '' }}"
+                                           name="phone" value="{{ old('phone') }}" required
+                                           autofocus>
+
+                                    @if ($errors->has('phone'))
+                                        <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('phone') }}</strong>
+                                    </span>
+                                    @endif
+                                </div>
+                            </div>
+
+                            {{-- Email --}}
                             <div class="form-group row">
                                 <label for="email"
                                        class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
@@ -61,6 +103,7 @@
                                 </div>
                             </div>
 
+                            {{-- Password --}}
                             <div class="form-group row">
                                 <label for="password"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
@@ -78,6 +121,7 @@
                                 </div>
                             </div>
 
+                            {{-- Password Confirmation --}}
                             <div class="form-group row">
                                 <label for="password-confirm"
                                        class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
