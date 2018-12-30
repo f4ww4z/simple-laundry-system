@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Get laundries for this user
+     */
+    public function laundries()
+    {
+        return $this->hasMany('App\Laundry');
+    }
 }
