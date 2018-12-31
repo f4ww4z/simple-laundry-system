@@ -12,7 +12,7 @@ class Laundry extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'user_id', 'service', 'weight', 'payment',
+        'id', 'user_id', 'service_id', 'weight', 'payment',
     ];
 
     /**

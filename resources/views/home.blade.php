@@ -24,10 +24,11 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button class="btn btn-secondary" href="/my-laundries">
-                                    {{ __('My Laundries') }}
+                                    My Laundries
                                 </button>
-                                <button class="btn btn-primary" href="/service-selection">
-                                    {{ __('Proceed') }}
+                                <button class="btn btn-primary"
+                                        onclick="location.href='/laundries/new-laundry-1'">
+                                    New Laundry
                                 </button>
                             </div>
                         </div>

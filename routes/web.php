@@ -23,4 +23,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route::get('/service_selection', )
+Route::get('/laundries/new-laundry-1', 'LaundriesController@createStep1');
+Route::post('/laundries/new-laundry-1', 'LaundriesController@postCreateStep1');
+
+Route::get('/laundries/new-laundry-2', 'LaundriesController@createStep2');
+Route::post('/laundries/new-laundry-2', 'LaundriesController@postCreateStep2');
